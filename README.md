@@ -13,3 +13,5 @@ Bonus 2: pas besoin de soumettre le formulaire pour contrôler les champs.
 
 Stocker les données récupérées. Ce peut être l'occasion de jeter un oeil au localStorage introduit par HTML5.
 Créez un formulaire de connexion. L'utilisation saisit un login et un mdp. Si les deux correspondent, on l'autorise à se connecter et on l'accueille avec un message du type : "Bienvenue <prénom> ".
+
+https://rashidmall.github.io/simplon-gestionUtilisateurs/
