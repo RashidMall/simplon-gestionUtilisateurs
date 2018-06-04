@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gestion d'utilisateurs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <div class="container">
+        <form id="user_form" action="home.html" method="post">
+            <h2>Sign Up</h2>
+            <div>
+                <label for="name">Username:</label>
+                <input type="text" id="name" name="user_name" required pattern=".{3,}" title="3 characters minimum">
+            </div>
+            <div>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="user_fname" required>
+            </div>
+            <div>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="user_lname" required>
+            </div>
+            <div class="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+            </div>
+            <div>
+                <label for="date">Birthday:</label>
+                <input id="date" type="date" required>
+            </div>
+            <div>
+                <label for="city">City:</label>
+                <input id="city" type="text" name="city" required>
+            </div>
+            <div>
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                oninvalid="this.setCustomValidity('A password must be at least eight characters including one uppercase letter, one lowercase letter, one number and special character')" oninput="setCustomValidity('')" 
+                title="A password must be at least eight characters including one uppercase letter, one lowercase letter, one number and special character">
+            </div>
+            <div>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user_mail" required oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+            </div>
+            <div>
+                <label for="telNo">Phone:</label>
+                <input id="telNo" name="telNo" type="tel" placeholder="XX.XX.XX.XX.XX" required pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}"
+                oninvalid="this.setCustomValidity('Phone must be formatted as XX.XX.XX.XX.XX')" oninput="setCustomValidity('')"
+                title="Phone must be formatted as XX.XX.XX.XX.XX">
+            </div>
+            <div>
+                <label for="myUrl">Your website:</label>
+                <input type="url" id="myUrl" name="homepage" required>
+            </div>
+            <div>
+                <label for="hobbies">Hobbies:</label>
+                <textarea id="hobbies" name="hobby" maxlength="200" required></textarea>
+            </div>
+            <div>
+                <label for="favorite_color">Color:</label>
+                <select id="favorite_color" required>
+                    <option value="white">White</option> 
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                    <option value="pink">Pink</option>
+                    <option value="brown">Brown</option>
+                </select>
+            </div>
+            <div class="button">
+                <button id="submitButton" type="submit">Submit</button>
+            </div>
+        </form>
+
+        <form id="login_form" action="home.html" method="post">
+                <h2>Log In</h2>
+                <div>
+                    <label for="logname">Username:</label>
+                    <input type="text" id="logname" name="user_name" required pattern=".{3,}" title="3 characters minimum">
+                </div>
+                <div>
+                    <label for="logpass">Password:</label>
+                    <input type="password" id="logpass" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                    oninvalid="this.setCustomValidity('A password must be at least eight characters including one uppercase letter, one lowercase letter, one number and special character')" oninput="setCustomValidity('')" 
+                    title="A password must be at least eight characters including one uppercase letter, one lowercase letter, one number and special character">
+                </div>
+                <div class="button">
+                    <button id="loginButton" type="submit">Log In</button>
+                </div>
+            </form>
+    </div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
